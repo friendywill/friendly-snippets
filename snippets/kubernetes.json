@@ -507,5 +507,18 @@
             "---",
             "$0"
         ]
+    },
+    "k8s Namespace": {
+        "prefix": "k-namespace",
+        "description": "k8s Namespace",
+        "body": [
+            "# https://kubernetes.io/docs/tasks/administer-cluster/namespaces/",
+            "apiVersion: v1",
+            "kind: Namespace",
+            "metadata:",
+            "  name: ${1:default}",
+            "---",
+            "$0"
+        ]
     }
 }
