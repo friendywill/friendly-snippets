@@ -488,5 +488,24 @@
             "# - ...",
             "$0"
         ]
+    },
+    "k8s Helm Chart Inflation Generator": {
+        "prefix": "k-helm-generator-file",
+        "description": "k8s Helm Chart Inflation Generator",
+        "body": [
+            "# https://kubectl.docs.kubernetes.io/references/kustomize/builtins/#_helmchartinflationgenerator_",
+            "apiVersion: builtin",
+            "kind: HelmChartInflationGenerator",
+            "metadata:",
+            "  name: ${1:my-chart-generator} # Name of this generator",
+            "name: ${3:chart-name} # Name of the chart you want to use",
+            "namespace: ${4:default}",
+            "repo: ${5:https://charts.example.com/}",
+            "version: ${6:1.0.0}",
+            "releaseName: ${7:my-release}",
+            "valuesFile: ${8:values.yaml}",
+            "---",
+            "$0"
+        ]
     }
 }
